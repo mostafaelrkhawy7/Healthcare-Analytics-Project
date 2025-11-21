@@ -29,7 +29,7 @@ The analysis focuses on two main views:
 
 ### 💵 Dashboard 2: Financial & Operational Performance
 <p align="center">
-  <img src="Screenshot%202025-11-21%20222720.png" alt="Financial Dashboard" width="900"/>
+  <img src="Screenshot 2025-11-22 000354.png" alt="Financial Dashboard" width="900"/>
 </p>
 
 ---
