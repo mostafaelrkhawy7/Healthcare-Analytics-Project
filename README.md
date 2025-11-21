@@ -24,12 +24,12 @@ The analysis focuses on two main views:
 
 ### 🩺 Dashboard 1: Patient & Medical Overview
 <p align="center">
-  <img src="Screenshot 2025-11-21 222625.png" alt="Patient & Medical Dashboard" width="900"/>
+  <img src="Screenshot 2025-11-21 222720.png" alt="Patient & Medical Dashboard" width="900"/>
 </p>
 
 ### 💵 Dashboard 2: Financial & Operational Performance
 <p align="center">
-  <img src="Screenshot 2025-11-21 222720.png" alt="Financial Dashboard" width="900"/>
+  <img src="Screenshot 2025-11-21 222625.png" alt="Financial Dashboard" width="900"/>   \
 </p>
 
 ---
