@@ -20,62 +20,75 @@ The analysis focuses on two main views:
 
 ---
 
+## 📸 Dashboard Preview
+
+### 🩺 Dashboard 1: Patient & Medical Overview
+<p align="center">
+  <img src="Screenshot 2025-11-21 222625.png" alt="Patient & Medical Dashboard" width="900"/>
+</p>
+
+### 💵 Dashboard 2: Financial & Operational Performance
+<p align="center">
+  <img src="Screenshot 2025-11-21 222720.png" alt="Financial Dashboard" width="900"/>
+</p>
+
+---
+
 ## 🧪 Data Processing Workflow
 
 ### 🔹 1. Data Cleaning (Power Query)
 Raw data was transformed to create essential analytical columns:
 
 - **Length of Stay:** Calculated days between `Admission Date` and `Discharge Date` to evaluate operational efficiency.
-- **Test Result Flag:** Converted text results into binary logic:
-  - Normal → `1`
-  - Abnormal → `0`
-  - Pending → `BLANK`
+- **Test Result Flag:** Converted text results into binary logic (`Normal=1`, `Abnormal=0`) to calculate test accuracy rates.
 - **Billing Category:** Segmented billing amounts into **Low**, **Medium**, and **High** for financial grouping.
-- **Age Group:** Categorized patients into demographics: `0–18`, `19–35`, `36–60`, `60+`.
-- **Time Intelligence:** Extracted Admission/Discharge **Months** and **Years** for trend analysis.
+- **Age Group:** Categorized patients into demographics (`0–18`, `19–35`, `36–60`, `60+`) to identify high-risk groups.
 
 ---
 
-### 🔹 2. Data Modeling & Measures
-Custom measures were created to track medical accuracy and financial health:
+## 📈 Key Insights & Analysis
 
-| Category | Measure | Formula / Logic |
-|:---|:---|:---|
-| **Medical** | **Completed Tests** | `= Normal Count + Abnormal Count` |
-| **Medical** | **Normal Test Rate** | `= Normal Count / Total Tests` |
-| **Medical** | **Abnormal Rate** | `= Abnormal Count / Total Tests` |
-| **Medical** | **Pending Rate** | `= Pending Count / Total Tests` |
-| **Financial** | **Total Billing** | Sum of all billing transactions |
-| **Financial** | **Avg Billing** | Average cost per patient/visit |
-| **Operational** | **Avg Length of Stay** | Average days a patient occupies a room |
-| **Operational** | **Total Rooms** | Count of unique rooms utilized |
+### 🌍 **1. Patient Demographics & Trends**
+- **High-Risk Age Groups:** The analysis reveals which age brackets require the most medical attention, helping in resource allocation.
+- **Admission Trends:** Monthly breakdown shows peak admission periods, allowing for better staff scheduling.
 
----
+### 🔬 **2. Medical Test Performance**
+- **Abnormal Test Rates:** Identified specific medical conditions that yield the highest percentage of "Abnormal" results.
+- **Lab Efficiency:** Tracked "Pending" test results to measure the operational speed of laboratory processing.
 
-## 📊 Dashboard Insights
+### 🏥 **3. Hospital & Doctor Performance**
+- **Patient Load:** Visualized which doctors and hospitals handle the highest volume of patients.
+- **Operational Bottlenecks:** Correlated "Average Length of Stay" with specific conditions to see which treatments prolong hospitalization.
 
-### 🩺 **1. Patient & Medical Overview**
-Focused on demographics and medical conditions.
-- **Demographics:** Analyzes which Age Groups visit the most and if age correlates with specific conditions.
-- **Test Analysis:** Breakdown of **Normal vs. Abnormal vs. Pending** results.
-- **Condition Analysis:** Identifies conditions with the highest "Abnormal" test rates.
-- **Performance:** Tracks which Hospitals and Doctors handle the highest volume of cases.
+### 💰 **4. Financial & Insurance Analysis**
+- **Revenue Drivers:** Identified top revenue-generating medical conditions.
+- **Insurance Coverage:** Analyzed which insurance providers cover the highest billing amounts versus those with lower payouts.
 
 ---
 
-### 💵 **2. Financial & Operational Performance**
-Focused on revenue, costs, and insurance.
-- **Cost by Condition:** Identifies which medical conditions generate the highest revenue vs. lowest cost.
-- **Operational Efficiency:** Detailed view of **Average Length of Stay**; determines which conditions require longer hospitalization.
-- **Time Trends:** Monthly and Yearly billing trends to identify peak financial periods.
-- **Insurance Analysis:** Breakdown of top Insurance Providers by usage frequency and coverage amounts.
+## 📊 Results & Recommendations
 
----
+### ✅ Key Results (KPIs)
+| Metric | Description |
+|:---|:---|
+| **Total Patients** | Total number of unique admissions analyzed. |
+| **Avg Length of Stay** | Key indicator of hospital efficiency and patient turnover speed. |
+| **Abnormal Test Rate** | Percentage of tests returning abnormal results (indicating higher medical severity). |
+| **Total Revenue** | Aggregated billing amount across all hospitals and conditions. |
+| **Most Common Condition** | The medical condition with the highest frequency of admissions. |
 
-## 📸 Dashboard Preview
-<p align="center">
-  <img src="path-to-your-image.png" alt="Healthcare Dashboard Preview" width="900"/>
-</p>
+### 💡 Strategic Recommendations
+
+#### 1. Operational Efficiency
+- **Reduce Pending Tests:** The data indicates a lag in test results for specific conditions. Streamlining lab communication could reduce the "Pending" rate and speed up discharge.
+- **Optimize Bed Occupancy:** Conditions with an unusually high "Average Length of Stay" should be reviewed to see if process improvements can reduce patient time in-hospital.
+
+#### 2. Financial Optimization
+- **Focus on High-Value Insurance:** Strengthen relationships with the top 3 insurance providers identified in the "Billing by Insurance" chart, as they contribute the majority of revenue.
+- **Billing Category Review:** Analyze the "Low" billing category to ensure no services are being undercharged compared to market rates.
+
+#### 3. Resource Allocation
+- **Staffing for Peak Months:** Based on the admission trend line, increase nursing and doctor staff during peak months (identified in the Time Analysis visuals) to handle patient influx.
 
 ---
 
